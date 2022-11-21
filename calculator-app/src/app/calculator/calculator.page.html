@@ -1,0 +1,52 @@
+<ion-content>
+  <div class="screen-section" noscroll>
+    <h1>
+      <ion-label>
+        {{display}}
+      </ion-label>
+    </h1>
+    <h1>
+      <ion-label>
+      </ion-label>
+    </h1>
+  </div>
+<ion-grid>
+  <ion-row>
+    <ion-col><ion-button (click)="reset()" size="large" color="medium" expand="block" shape="round">AC</ion-button></ion-col>
+    <ion-col><ion-button (click)="resetLastNumber()" color="medium" size="large" expand="block" shape="round">C</ion-button></ion-col>
+    <ion-col><ion-button (click)="changeSign()" color="medium" size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
+    <ion-col><ion-button (click)="clickOperator('/')" color="warning" size="large" expand="block" shape="round">/</ion-button></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col><ion-button (click)="clickNumber(7)" color="light" size="large" expand="block" shape="round">7</ion-button></ion-col>
+    <ion-col><ion-button (click)="clickNumber(8)" color="light" size="large" expand="block" shape="round">8</ion-button></ion-col>
+    <ion-col><ion-button (click)="clickNumber(9)" color="light" size="large" expand="block" shape="round">9</ion-button></ion-col>
+    <ion-col><ion-button (click)="clickOperator('*')" color="warning" size="large" expand="block" shape="round">×</ion-button></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col><ion-button (click)="clickNumber(4)" color="light" size="large" expand="block" shape="round">4</ion-button></ion-col>
+    <ion-col><ion-button (click)="clickNumber(5)" color="light" size="large" expand="block" shape="round">5</ion-button></ion-col>
+    <ion-col><ion-button (click)="clickNumber(6)" color="light" size="large" expand="block" shape="round">6</ion-button></ion-col>
+    <ion-col><ion-button (click)="clickOperator('-')" color="warning" size="large" expand="block" shape="round">-</ion-button></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col><ion-button (click)="clickNumber(1)" color="light" size="large" expand="block" shape="round">1</ion-button></ion-col>
+    <ion-col><ion-button (click)="clickNumber(2)" color="light" size="large" expand="block" shape="round">2</ion-button></ion-col>
+    <ion-col><ion-button (click)="clickNumber(3)" color="light" size="large" expand="block" shape="round">3</ion-button></ion-col>
+    <ion-col><ion-button (click)="clickOperator('+')" color="warning" size="large" expand="block" shape="round">+</ion-button></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6"><ion-button (click)="clickNumber(0)" color="light" size="large" expand="block" shape="round">0</ion-button></ion-col>
+    <ion-col size="3"><ion-button (click)="setDecimal()" color="light" size="large" expand="block" shape="round">.</ion-button></ion-col>
+    <ion-col size="3"><ion-button (click)="calculate()" color="warning" size="large" expand="block" shape="round">=</ion-button></ion-col>
+  </ion-row>
+</ion-grid>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-label><h6>Theme Switcher</h6></ion-label>
+      <ion-toggle mode="ios" class="all-custom" color="medium" (ionChange)="onToggleColorTheme($event)"></ion-toggle>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
