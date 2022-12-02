@@ -1,16 +1,19 @@
-.screen-section{   
-    height: 30%;
-    padding: 10% 5%;  
-
-    h1{
-        font-size: 5rem;
-        text-align: left;
-        line-height: 70%;
-    }
+.maindisplay {
+    height: 25vh;
+    padding: 5% !important;
+    font-size: 4rem;
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+    overflow: auto;
+    font-weight: 600;
+  }
+  
+  .subdisplay {
+    height: 25%;
+    font-size: 2rem;
+    overflow: auto;
+    font-weight: 300;
+  }
+ion-grid{
+    padding-top: 50px;
 }
-//ion-col {
-//    background-color: #000000;
-//}
-//ion-content {
-//    --background: #000000;
-//}

@@ -1,0 +1,134 @@
+<ion-menu contentId="main-content" type="reveal">
+  <ion-header>
+    <h1>APP TOOLS</h1>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list lines="none" class="tool-list">
+      <h4>Cipher Tool</h4>
+      <ion-item menu-close href="#">Atbash Cipher</ion-item>
+      <ion-item menu-close href="#">Caesar Cipher</ion-item>
+      <ion-item menu-close href="#">Vigenere Cipher</ion-item>
+      <h4>Calculator Tool</h4>
+      <ion-item menu-close href="#">Simple Calculator</ion-item>
+      <ion-item menu-close href="#">Scientific Calculator</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header lines="none" [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button><ion-icon name="menu-outline"></ion-icon></ion-menu-button>
+      </ion-buttons>
+      <ion-title>APP TOOLS</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+  <ion-item>
+    <ion-title size="small" slot="end">{{ today | date: 'medium' }}</ion-title>
+    <h1>{{today}}</h1>
+  </ion-item>
+    <ion-grid>
+      <h3>Cipher Tool</h3>
+      <ion-row>
+        <ion-col><ion-button>Atbash Cipher</ion-button></ion-col>
+        <ion-col><ion-button>Caesar Cipher</ion-button></ion-col>
+        <ion-col><ion-button>Vigenere Cipher</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <h3>Calculator</h3>
+      <ion-row>
+        <ion-col><ion-button>Simple Calculator</ion-button></ion-col>
+        <ion-col><ion-button>Scientific Calculator</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <ion-label position="floating">Plaintext</ion-label>
+    <ion-textarea
+    [(ngModel)]="plaintextValue"
+    [clearOnEdit]="true">
+    </ion-textarea>
+  
+    <ion-label position="floating">Floating label</ion-label>
+    <ion-input [(ngModel)]="encryptedtextValue" [clearOnEdit]="true"></ion-input>
+  
+    <ion-button (click)="encrypt()">
+      try
+    </ion-button>
+    <ion-button (click)="encrypt()">
+      try2
+    </ion-button>
+  
+  
+    <ion-label position="floating">Plaintext</ion-label>
+    <ion-textarea
+    [(ngModel)]="plaintextValue1"
+    [clearOnEdit]="true">
+    </ion-textarea>
+  
+    <ion-label position="floating">Shift</ion-label>
+    <ion-select [(ngModel)]="shift">
+      <ion-select-option value="1">1</ion-select-option>
+      <ion-select-option value="2">2</ion-select-option>
+      <ion-select-option value="3">3</ion-select-option>
+      <ion-select-option value="4">4</ion-select-option>
+      <ion-select-option value="5">5</ion-select-option>
+      <ion-select-option value="6">6</ion-select-option>
+      <ion-select-option value="7">7</ion-select-option>
+      <ion-select-option value="8">8</ion-select-option>
+      <ion-select-option value="9">9</ion-select-option>
+      <ion-select-option value="10">10</ion-select-option>
+      <ion-select-option value="11">11</ion-select-option>
+      <ion-select-option value="12">12</ion-select-option>
+      <ion-select-option value="13">13</ion-select-option>
+      <ion-select-option value="14">14</ion-select-option>
+      <ion-select-option value="15">15</ion-select-option>
+      <ion-select-option value="16">16</ion-select-option>
+      <ion-select-option value="17">17</ion-select-option>
+      <ion-select-option value="18">18</ion-select-option>
+      <ion-select-option value="19">19</ion-select-option>
+      <ion-select-option value="20">20</ion-select-option>
+      <ion-select-option value="21">21</ion-select-option>
+      <ion-select-option value="22">22</ion-select-option>
+      <ion-select-option value="23">23</ion-select-option>
+      <ion-select-option value="24">24</ion-select-option>
+      <ion-select-option value="25">25</ion-select-option>
+      <ion-select-option value="26">26</ion-select-option>
+    </ion-select>
+  
+    <ion-label position="floating">Floating label</ion-label>
+    <ion-input [(ngModel)]="encryptedtextValue1"></ion-input>
+  
+    <ion-button (click)="encrypt1()">
+      try
+    </ion-button>
+    <ion-button (click)="decrypt1()">
+      try2
+    </ion-button>
+
+    <ion-label position="floating">Plaintext</ion-label>
+    <ion-textarea
+    [(ngModel)]="plaintextValue2"
+    [clearOnEdit]="true">
+    </ion-textarea>
+    <ion-label position="floating">Key</ion-label>
+    <ion-textarea
+    [(ngModel)]="key"
+    [clearOnEdit]="true">
+    </ion-textarea>
+    <ion-label position="floating">Encrypted</ion-label>
+    <ion-textarea
+    [(ngModel)]="encryptedtextValue2"
+    [clearOnEdit]="true">
+    </ion-textarea>
+
+    <ion-button (click)="encrypt2()">
+      try
+    </ion-button>
+    <ion-button (click)="decrypt2()">
+      try2
+    </ion-button>
+  </ion-content>
+</div>
