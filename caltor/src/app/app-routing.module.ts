@@ -24,10 +24,6 @@ const routes: Routes = [
     loadChildren: () => import('./sample/sample.module').then( m => m.SamplePageModule)
   },
   {
-    path: 'scical',
-    loadChildren: () => import('./scical/scical.module').then( m => m.ScicalPageModule)
-  },
-  {
     path: 'atbashcipher',
     loadChildren: () => import('./atbashcipher/atbashcipher.module').then( m => m.AtbashcipherPageModule)
   },
