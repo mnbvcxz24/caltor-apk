@@ -1,66 +1,66 @@
-<ion-content>
-  <ion-menu contentId="main-content">
-    <ion-header>
+<ion-menu contentId="main-content" type="push">
+  <ion-content class="ion-padding" scroll-y="false" fullscreen>
+    <ion-header class="ion-no-border">
       <ion-toolbar>
-        <ion-title>Menu Content</ion-title>
+        <a href="/home"><h1>APP TOOLS</h1></a>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">This is the menu content.</ion-content>
-  </ion-menu>
-  <div class="ion-page" id="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-      <div class="maindisplay">
+      <ion-list color="none" lines="none">
+        <h4>Cipher Tool</h4>
+        <ion-item menu-close href="/atbashcipher">Atbash Cipher</ion-item>
+        <ion-item menu-close href="/caesarcipher">Caesar Cipher</ion-item>
+        <ion-item menu-close href="/vigenerecipher">Vigenere Cipher</ion-item>
+        <h4>Calculator Tool</h4>
+        <ion-item menu-close href="/calculator">Simple Calculator</ion-item>
+        <ion-item menu-close href="/scicalculator">Scientific Calculator</ion-item>
+      </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button><ion-icon color="dark" name="menu-outline"></ion-icon></ion-menu-button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar> 
+  </ion-header>
+<ion-content fullscreen>
+    <div class="maindisplay">
         <div class="subdisplay">{{ subText }}</div>
         {{ mainText }}
       </div>
     <ion-grid>
       <ion-row>
-        <ion-col><ion-button (click)="allClear()" size="large" color="medium" expand="block" shape="round">AC</ion-button></ion-col>
-        <ion-col><ion-button (click)="resetLastNumber()" color="medium" size="large" expand="block" shape="round">C</ion-button></ion-col>
-        <ion-col><ion-button (click)="changeSign()" color="medium" size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
-        <ion-col><ion-button (click)="pressKey('/')" color="warning" size="large" expand="block" shape="round">/</ion-button></ion-col>
+        <ion-col><ion-button (click)="allClear()" size="large" expand="block" shape="round">AC</ion-button></ion-col>
+        <ion-col><ion-button (click)="resetLastNumber()" size="large" expand="block" shape="round">C</ion-button></ion-col>
+        <ion-col><ion-button (click)="changeSign()" size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('/')" size="large" expand="block" shape="round">/</ion-button></ion-col>
       </ion-row>
       <ion-row>
-        <ion-col><ion-button (click)="pressKey('7')" color="light" size="large" expand="block" shape="round">7</ion-button></ion-col>
-        <ion-col><ion-button (click)="pressKey('8')" color="light" size="large" expand="block" shape="round">8</ion-button></ion-col>
-        <ion-col><ion-button (click)="pressKey('9')" color="light" size="large" expand="block" shape="round">9</ion-button></ion-col>
-        <ion-col><ion-button (click)="pressKey('x')" color="warning" size="large" expand="block" shape="round">×</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('7')" size="large" expand="block" shape="round">7</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('8')" size="large" expand="block" shape="round">8</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('9')" size="large" expand="block" shape="round">9</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('x')" size="large" expand="block" shape="round">×</ion-button></ion-col>
       </ion-row>
       <ion-row>
-        <ion-col><ion-button (click)="pressKey('4')" color="light" size="large" expand="block" shape="round">4</ion-button></ion-col>
-        <ion-col><ion-button (click)="pressKey('5')" color="light" size="large" expand="block" shape="round">5</ion-button></ion-col>
-        <ion-col><ion-button (click)="pressKey('6')" color="light" size="large" expand="block" shape="round">6</ion-button></ion-col>
-        <ion-col><ion-button (click)="pressKey('-')" color="warning" size="large" expand="block" shape="round">-</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('4')" size="large" expand="block" shape="round">4</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('5')" size="large" expand="block" shape="round">5</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('6')" size="large" expand="block" shape="round">6</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('-')" size="large" expand="block" shape="round">-</ion-button></ion-col>
       </ion-row>
       <ion-row>
-        <ion-col><ion-button (click)="pressKey('1')" color="light" size="large" expand="block" shape="round">1</ion-button></ion-col>
-        <ion-col><ion-button (click)="pressKey('2')" color="light" size="large" expand="block" shape="round">2</ion-button></ion-col>
-        <ion-col><ion-button (click)="pressKey('3')" color="light" size="large" expand="block" shape="round">3</ion-button></ion-col>
-        <ion-col><ion-button (click)="pressKey('+')" color="warning" size="large" expand="block" shape="round">+</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('1')" size="large" expand="block" shape="round">1</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('2')" size="large" expand="block" shape="round">2</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('3')" size="large" expand="block" shape="round">3</ion-button></ion-col>
+        <ion-col><ion-button (click)="pressKey('+')" size="large" expand="block" shape="round">+</ion-button></ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="6"><ion-button (click)="pressKey('0')" color="light" size="large" expand="block" shape="round">0</ion-button></ion-col>
-        <ion-col size="3"><ion-button (click)="pressKey('.')" color="light" size="large" expand="block" shape="round">.</ion-button></ion-col>
-        <ion-col size="3"><ion-button (click)="getAnswer()" color="warning" size="large" expand="block" shape="round">=</ion-button></ion-col>
+        <ion-col size="6"><ion-button (click)="pressKey('0')" size="large" expand="block" shape="round">0</ion-button></ion-col>
+        <ion-col size="3"><ion-button (click)="pressKey('.')" size="large" expand="block" shape="round">.</ion-button></ion-col>
+        <ion-col size="3"><ion-button (click)="getAnswer()" size="large" expand="block" shape="round">=</ion-button></ion-col>
       </ion-row>
     </ion-grid>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-label><h6>Theme Switcher</h6></ion-label>
-          <ion-toggle mode="ios" class="all-custom" color="medium" (ionChange)="onToggleColorTheme($event)"></ion-toggle>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    </ion-content>
-  </div>
-
-</ion-content>
+  </ion-content>
+</div>

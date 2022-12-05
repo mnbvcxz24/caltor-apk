@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ScicalPage } from './scical.page';
+import { AtbashcipherPage } from './atbashcipher.page';
 
-describe('ScicalPage', () => {
-  let component: ScicalPage;
-  let fixture: ComponentFixture<ScicalPage>;
+describe('AtbashcipherPage', () => {
+  let component: AtbashcipherPage;
+  let fixture: ComponentFixture<AtbashcipherPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ScicalPage ],
+      declarations: [ AtbashcipherPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ScicalPage);
+    fixture = TestBed.createComponent(AtbashcipherPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

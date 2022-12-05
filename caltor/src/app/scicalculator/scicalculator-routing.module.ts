@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ScicalPage } from './scical.page';
+import { ScicalculatorPage } from './scicalculator.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ScicalPage
+    component: ScicalculatorPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ScicalPageRoutingModule {}
+export class ScicalculatorPageRoutingModule {}

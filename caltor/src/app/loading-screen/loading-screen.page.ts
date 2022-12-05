@@ -11,8 +11,8 @@ export class LoadingScreenPage implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      this.router.navigate(['calculator']);
-    }, 2500)
+      this.router.navigate(['home']);
+    }, 1500)
     
   }
 

@@ -1,0 +1,118 @@
+<ion-menu contentId="main-content" type="push">
+  <ion-content class="ion-padding" scroll-y="false" fullscreen>
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <a href="/home"><h1>APP TOOLS</h1></a>
+      </ion-toolbar>
+    </ion-header>
+      <ion-list color="none" lines="none">
+        <h4>Cipher Tool</h4>
+        <ion-item menu-close href="/atbashcipher">Atbash Cipher</ion-item>
+        <ion-item menu-close href="/caesarcipher">Caesar Cipher</ion-item>
+        <ion-item menu-close href="/vigenerecipher">Vigenere Cipher</ion-item>
+        <h4>Calculator Tool</h4>
+        <ion-item menu-close href="/calculator">Simple Calculator</ion-item>
+        <ion-item menu-close href="/scicalculator">Scientific Calculator</ion-item>
+      </ion-list>
+  </ion-content>
+  </ion-menu>
+  
+  
+<div class="ion-page" id="main-content">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button><ion-icon color="dark" name="menu-outline"></ion-icon></ion-menu-button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar> 
+  </ion-header>
+<ion-content fullscreen>
+  <ion-card >
+    <ion-card-header>
+      <ion-card-title>Vigenere Cipher</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item class="input">
+              <ion-label class="label" position="floating">Input</ion-label>
+              <ion-textarea
+              [autoGrow]="true"
+              [(ngModel)]="plaintextValue"
+              [clearOnEdit]="true">
+              </ion-textarea>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item class="input">
+              <ion-label class="label" position="floating">Key</ion-label>
+              <ion-textarea
+              [(ngModel)]="key"
+              [clearOnEdit]="true">
+              </ion-textarea>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item class="input">
+              <ion-label class="label" position="floating">Result</ion-label>
+              <ion-textarea
+              [autoGrow]="true"
+              [(ngModel)]="encryptedtextValue">
+              </ion-textarea>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+    <ion-grid class="grid">
+      <ion-row>
+        <ion-col class="col">
+          <ion-button class="button" (click)="encrypt()">Encrypt</ion-button>
+        </ion-col>
+        <ion-col class="col">
+          <ion-button class="button" (click)="clear()" >Clear</ion-button>
+        </ion-col>
+        <ion-col class="col">
+          <ion-button class="button" (click)="decrypt()">Decrypt</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+<ion-button class="text1" expand="full" (click)="text1 = !text1">
+  What is the Vigenere cipher?
+  <ion-icon slot="end" name="chevron-down-circle-outline"></ion-icon>
+</ion-button>
+<ion-text *ngIf="text1" >
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-start">
+          The Vigenère cipher is a polyalphabetic substitution cipher that is a natural evolution of the Caesar cipher. The Caesar cipher encrypts by shifting each letter in the plaintext up or down a certain number of places in the alphabet. If the message was right shifted by 4, each A would become E, and each S would become W.
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-text>
+
+<ion-button class="text2" expand="full" (click)="text2 = !text2">
+  History
+  <ion-icon slot="end" name="chevron-down-circle-outline"></ion-icon>
+</ion-button>
+<ion-text *ngIf="text2" >
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-start">
+          The cipher was invented in 1553 by the Italian cryptographer Giovan Battista Bellaso but for centuries was attributed to the 16th-century French cryptographer Blaise de Vigenère, who devised a similar cipher in 1586.
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-text>
+
+</ion-content>
+</div>

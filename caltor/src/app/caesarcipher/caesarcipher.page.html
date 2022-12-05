@@ -1,0 +1,142 @@
+<ion-menu contentId="main-content" type="push">
+  <ion-content class="ion-padding" scroll-y="false" fullscreen>
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <a href="/home"><h1>APP TOOLS</h1></a>
+      </ion-toolbar>
+    </ion-header>
+      <ion-list color="none" lines="none">
+        <h4>Cipher Tool</h4>
+        <ion-item menu-close href="/atbashcipher">Atbash Cipher</ion-item>
+        <ion-item menu-close href="/caesarcipher">Caesar Cipher</ion-item>
+        <ion-item menu-close href="/vigenerecipher">Vigenere Cipher</ion-item>
+        <h4>Calculator Tool</h4>
+        <ion-item menu-close href="/calculator">Simple Calculator</ion-item>
+        <ion-item menu-close href="/scicalculator">Scientific Calculator</ion-item>
+      </ion-list>
+  </ion-content>
+  </ion-menu>
+  
+  
+<div class="ion-page" id="main-content">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button><ion-icon color="dark" name="menu-outline"></ion-icon></ion-menu-button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar> 
+  </ion-header>
+<ion-content fullscreen>
+  <ion-card >
+    <ion-card-header>
+      <ion-card-title>Caesar Cipher</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item class="input">
+              <ion-label class="label" position="floating">Input</ion-label>
+              <ion-textarea
+              [autoGrow]="true"
+              [(ngModel)]="plaintextValue"
+              [clearOnEdit]="true">
+              </ion-textarea>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item class="input" lines="none">
+              <ion-label position="floating">Shift</ion-label>
+              <ion-select [(ngModel)]="shift">
+                <ion-select-option value="1">1</ion-select-option>
+                <ion-select-option value="2">2</ion-select-option>
+                <ion-select-option value="3">3</ion-select-option>
+                <ion-select-option value="4">4</ion-select-option>
+                <ion-select-option value="5">5</ion-select-option>
+                <ion-select-option value="6">6</ion-select-option>
+                <ion-select-option value="7">7</ion-select-option>
+                <ion-select-option value="8">8</ion-select-option>
+                <ion-select-option value="9">9</ion-select-option>
+                <ion-select-option value="10">10</ion-select-option>
+                <ion-select-option value="11">11</ion-select-option>
+                <ion-select-option value="12">12</ion-select-option>
+                <ion-select-option value="13">13</ion-select-option>
+                <ion-select-option value="14">14</ion-select-option>
+                <ion-select-option value="15">15</ion-select-option>
+                <ion-select-option value="16">16</ion-select-option>
+                <ion-select-option value="17">17</ion-select-option>
+                <ion-select-option value="18">18</ion-select-option>
+                <ion-select-option value="19">19</ion-select-option>
+                <ion-select-option value="20">20</ion-select-option>
+                <ion-select-option value="21">21</ion-select-option>
+                <ion-select-option value="22">22</ion-select-option>
+                <ion-select-option value="23">23</ion-select-option>
+                <ion-select-option value="24">24</ion-select-option>
+                <ion-select-option value="25">25</ion-select-option>
+                <ion-select-option value="26">26</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item class="input">
+              <ion-label class="label" position="floating">Result</ion-label>
+              <ion-textarea
+              [autoGrow]="true"
+              [(ngModel)]="encryptedtextValue">
+              </ion-textarea>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+    <ion-grid class="grid">
+      <ion-row>
+        <ion-col class="col">
+          <ion-button class="button" (click)="encrypt()">Encrypt</ion-button>
+        </ion-col>
+        <ion-col class="col">
+          <ion-button class="button" (click)="clear()" >Clear</ion-button>
+        </ion-col>
+        <ion-col class="col">
+          <ion-button class="button" (click)="encrypt()">Decrypt</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+<ion-button class="text1" expand="full" (click)="text1 = !text1">
+  What is the Caesar cipher?
+  <ion-icon slot="end" name="chevron-down-circle-outline"></ion-icon>
+</ion-button>
+<ion-text *ngIf="text1" >
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-start">
+          The Caesar cipher is named after the legendary Roman emperor Julius Caesar, who used it to protect his military communications. It is a simple substitution cipher, where each letter corresponds to another letter a certain number of positions forward or backward in the alphabet. For example, a shift right of 5 would encode the word Caesar as “hfjxfw”. Due to this simplicity, the Caesar cipher offers little security against those with even a passing knowledge of cryptography.
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-text>
+
+<ion-button class="text2" expand="full" (click)="text2 = !text2">
+  History
+  <ion-icon slot="end" name="chevron-down-circle-outline"></ion-icon>
+</ion-button>
+<ion-text *ngIf="text2" >
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-start">
+          The Caesar cipher is one of the oldest forms of cryptography in recorded history, with instances stretching back long before it was first named. Nonetheless, the cipher finds itself named for, and consistently associated with, the famous Roman Emperor and General Julius Caesar. It was Caesar who reportedly used the cipher with a shift of three to encode military messages to his commanders while on a campaign. After his assassination, Caesar's nephew Augustus carried on his uncle’s usage of the cipher to protect his correspondence but changed his messages encryption to a right shift of one. Despite the presence of more complex codes, the cipher was likely favored by the emperors due to its simplicity. The cipher was likely effective due to the illiteracy of many of those who would intercept them and a common misconception that the messages were written in a mysterious foreign language. Enforcing this assumption of security is the lack of evidence that any methods for solving substitution ciphers existed at the time, with the first instances of frequency analysis appearing in the middle east centuries after Caesar's death.
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-text>
+
+</ion-content>
+</div>

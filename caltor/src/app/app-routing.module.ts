@@ -26,6 +26,22 @@ const routes: Routes = [
   {
     path: 'scical',
     loadChildren: () => import('./scical/scical.module').then( m => m.ScicalPageModule)
+  },
+  {
+    path: 'atbashcipher',
+    loadChildren: () => import('./atbashcipher/atbashcipher.module').then( m => m.AtbashcipherPageModule)
+  },
+  {
+    path: 'caesarcipher',
+    loadChildren: () => import('./caesarcipher/caesarcipher.module').then( m => m.CaesarcipherPageModule)
+  },
+  {
+    path: 'vigenerecipher',
+    loadChildren: () => import('./vigenerecipher/vigenerecipher.module').then( m => m.VigenerecipherPageModule)
+  },
+  {
+    path: 'scicalculator',
+    loadChildren: () => import('./scicalculator/scicalculator.module').then( m => m.ScicalculatorPageModule)
   }
 ];
 

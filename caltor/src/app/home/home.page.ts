@@ -1,3 +1,4 @@
+import { Time } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+//time
+
+
+//
+
+
 
 plaintextValue: string = "";
 encryptedtextValue: string = "";
@@ -172,17 +179,18 @@ decrypt2(){
   this.encryptedtextValue2 = decrypted;
 }
 /// end
-public today = Date.now();
+today: any;
+
+refreshTime() {
+  this.today= setInterval(() => {
+    this.today = Date.now()
+  }, 1000);
+}
 
   constructor() {
-    setInterval(this.refreshTime, 1000)
   }
 
   ngOnInit() {
-    setInterval(this.refreshTime, 1000)
+    this.refreshTime()
   }
-  refreshTime() {
-    this.today = Date.now()
-    
-}
 }

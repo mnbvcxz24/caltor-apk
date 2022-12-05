@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ScicalPageRoutingModule } from './scical-routing.module';
+import { CaesarcipherPageRoutingModule } from './caesarcipher-routing.module';
 
-import { ScicalPage } from './scical.page';
+import { CaesarcipherPage } from './caesarcipher.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ScicalPageRoutingModule
+    CaesarcipherPageRoutingModule
   ],
-  declarations: [ScicalPage]
+  declarations: [CaesarcipherPage]
 })
-export class ScicalPageModule {}
+export class CaesarcipherPageModule {}

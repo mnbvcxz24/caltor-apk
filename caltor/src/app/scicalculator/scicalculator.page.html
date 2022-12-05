@@ -1,0 +1,92 @@
+<ion-menu contentId="main-content" type="push">
+  <ion-content class="ion-padding" scroll-y="false" fullscreen>
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <a href="/home"><h1>APP TOOLS</h1></a>
+      </ion-toolbar>
+    </ion-header>
+      <ion-list color="none" lines="none">
+        <h4>Cipher Tool</h4>
+        <ion-item menu-close href="/atbashcipher">Atbash Cipher</ion-item>
+        <ion-item menu-close href="/caesarcipher">Caesar Cipher</ion-item>
+        <ion-item menu-close href="/vigenerecipher">Vigenere Cipher</ion-item>
+        <h4>Calculator Tool</h4>
+        <ion-item menu-close href="/calculator">Simple Calculator</ion-item>
+        <ion-item menu-close href="/scicalculator">Scientific Calculator</ion-item>
+      </ion-list>
+  </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content">
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button><ion-icon color="dark" name="menu-outline"></ion-icon></ion-menu-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+      </ion-toolbar> 
+    </ion-header>
+  <ion-content fullscreen>
+    <h1 colspan="7"><input type="text" id="display" name="display" size="78" maxlength="25" disabled></h1>
+    <ion-grid>
+      <ion-row>
+        <ion-button onClick="calculator.display.value += '3.14'">phi</ion-button>
+        <ion-col size="2"><button onclick="calculator.display.value += '('">(</button></ion-col>
+        <ion-col size="2"><button onclick="calculator.display.value += ')'" >)</button></ion-col>
+        <ion-col size="2"><button onclick="calculator.display.value += '.'">.</button></ion-col>
+        <ion-col size="2"><button onclick="calculator.display.value = ''">clear</button></ion-col>
+        <ion-col size="2"><button onclick="calculator.display.value = calculator.display.value.substring(0, calculator.display.value.length - 1)">del</button></ion-col>
+        <ion-col size="2"><button onclick="calculator.display.value += '/'">/</button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += '1'" size="large" expand="block" shape="round">1</ion-button></ion-col>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += '2'" size="large" expand="block" shape="round">2</ion-button></ion-col>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += '3'" size="large" expand="block" shape="round">3</ion-button></ion-col>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += '+'" size="large" expand="block" shape="round">+</ion-button></ion-col>
+        <ion-col size="2"><ion-button onclick="calculator.display.value = Math.sin(calculator.display.value)" size="large" expand="block" shape="round">sin</ion-button></ion-col>
+        <ion-col size="2"><ion-button onclick="calculator.display.value = Math.sinh(calculator.display.value)" size="large" expand="block" shape="round">sinh</ion-button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += '3.14'" size="large" expand="block" shape="round">AC</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">/</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">×</ion-button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += '3.14'" size="large" expand="block" shape="round">AC</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">/</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">×</ion-button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += '3.14'" size="large" expand="block" shape="round">AC</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">/</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">×</ion-button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += '3.14'" size="large" expand="block" shape="round">AC</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">/</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">×</ion-button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += '3.14'" size="large" expand="block" shape="round">AC</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">/</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round">×</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-content>
+</div>

@@ -1,0 +1,114 @@
+<ion-menu contentId="main-content" type="push">
+  <ion-content class="ion-padding" scroll-y="false" fullscreen>
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <a href="/home"><h1>APP TOOLS</h1></a>
+      </ion-toolbar>
+    </ion-header>
+      <ion-list color="none" lines="none">
+        <h4>Cipher Tool</h4>
+        <ion-item menu-close href="/atbashcipher">Atbash Cipher</ion-item>
+        <ion-item menu-close href="/caesarcipher">Caesar Cipher</ion-item>
+        <ion-item menu-close href="/vigenerecipher">Vigenere Cipher</ion-item>
+        <h4>Calculator Tool</h4>
+        <ion-item menu-close href="/calculator">Simple Calculator</ion-item>
+        <ion-item menu-close href="/scicalculator">Scientific Calculator</ion-item>
+      </ion-list>
+  </ion-content>
+  </ion-menu>
+  
+  
+<div class="ion-page" id="main-content">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button><ion-icon color="dark" name="menu-outline"></ion-icon></ion-menu-button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar> 
+  </ion-header>
+<ion-content fullscreen>
+  <ion-card >
+    <ion-card-header>
+      <ion-card-title>Atbash Cipher</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item class="input">
+              <ion-label class="label" position="floating">Input</ion-label>
+              <ion-textarea
+              [autoGrow]="true"
+              [(ngModel)]="plaintextValue"
+              [clearOnEdit]="true">
+              </ion-textarea>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item class="input">
+              <ion-label class="label" position="floating">Result</ion-label>
+              <ion-textarea
+              [autoGrow]="true"
+              [(ngModel)]="encryptedtextValue">
+              </ion-textarea>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+    <ion-grid class="grid">
+      <ion-row>
+        <ion-col class="col">
+          <ion-button class="button" (click)="encrypt()">Encrypt</ion-button>
+        </ion-col>
+        <ion-col class="col">
+          <ion-button class="button" (click)="clear()" >Clear</ion-button>
+        </ion-col>
+        <ion-col class="col">
+          <ion-button class="button" (click)="encrypt()">Decrypt</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+<ion-button class="text1" expand="full" (click)="text1 = !text1">
+  What is the Atbash cipher?
+  <ion-icon slot="end" name="chevron-down-circle-outline"></ion-icon>
+</ion-button>
+<ion-text *ngIf="text1" >
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-start">
+  The Atbash Cipher is a really simple substitution cipher that is sometimes called mirror code.
+  It is believed to be the first cipher ever used, and its use pre-dates Egyptian examples of encryption.
+  To use Atbash, you simply reverse the alphabet, so A encodes to Z, B to Y and so on.
+  Atbash is considered a special case of Affine Cipher, a monoalphabetic substitution cipher.
+  Affine is encrypted by converting letters to their numerical equivalent (A=1, Z=26 etc.), putting that number through a mathematical formula, and the converting the result into letters.
+  With Atbash, the Affine formula is a = b = (m − 1), where m is the length of the alphabet.
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-text>
+
+<ion-button class="text2" expand="full" (click)="text2 = !text2">
+  History
+  <ion-icon slot="end" name="chevron-down-circle-outline"></ion-icon>
+</ion-button>
+<ion-text *ngIf="text2" >
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-start">
+          While a lot of people look at ancient Egypt for the origins of codes (and that is where the first evidence of encryption was found) Atbash was actually the first cipher. It has its origins in Israel and was originally used to encrypt and decrypt the Hebrew alphabet. That’s where the name comes from, it’s a shortened version of Aleph Taw Bet Shin, The first, last, second, and second-from-last letters in the Hebrew alphabet.
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-text>
+
+</ion-content>
+</div>
