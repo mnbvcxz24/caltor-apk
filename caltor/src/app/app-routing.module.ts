@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'scicalculator',
     loadChildren: () => import('./scicalculator/scicalculator.module').then( m => m.ScicalculatorPageModule)
+  },
+  {
+    path: 'horoscope',
+    loadChildren: () => import('./horoscope/horoscope.module').then( m => m.HoroscopePageModule)
   }
 ];
 

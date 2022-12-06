@@ -1,0 +1,45 @@
+ion-item{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    --ion-item-background: transparent;
+    --color: #000;
+  }
+  h1{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000;
+  }
+  h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #000;
+  }
+  a {
+    text-decoration: none;
+  }
+  ion-header {
+    --shadow: none !important;
+  }
+  ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+  }
+  ion-content{
+    --background: url(/assets/background/bg-main2.png) no-repeat;
+    font-family: 'Poppins', sans-serif;
+  }
+  .ion-padding{
+    --background: url(/assets/background/bg-sidemenu.png) no-repeat;
+  }
+  ion-list{
+    --ion-item-background: transparent;
+    --color: #000;
+  }
+  ion-item{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    --ion-item-background: transparent;
+    --color: #000;
+  }
