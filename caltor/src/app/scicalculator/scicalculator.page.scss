@@ -24,6 +24,33 @@ h4{
 a {
   text-decoration: none;
 }
+ion-grid{
+  padding-top: 50px;
+  ion-col{
+    color: #000;
+    text-align: center;
+    ion-button{
+      font-size: 15px;
+      border: solid 1px rgb(0, 0, 0);
+      --display: block;
+      --background: transparent;
+      --background-hover: transparent !important;
+      --ripple-color: transparent;
+      --background-activated: transparent;
+      --cursor: pointer;
+      --box-shadow: none;
+      color: black;
+      font-family: 'Poppins', sans-serif;
+      border-radius: 15px;
+    }
+  }
+}
+input{
+  background: transparent;
+  border: solid 1px rgb(0, 0, 0);
+  width: 100%;
+  height: 100px;
+}
 ion-header {
   --shadow: none !important;
 }

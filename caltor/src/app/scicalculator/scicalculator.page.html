@@ -26,65 +26,62 @@
         <ion-title></ion-title>
       </ion-toolbar> 
     </ion-header>
+
   <ion-content fullscreen>
-    <h1 colspan="7"><input type="text" id="display" name="display" size="78" maxlength="25" disabled></h1>
+  <div class="display">
+    <br>
+    <form name="calculator">
+      <h1 colspan="7"><input type="text" id="display" name="display" size="80" maxlength="25" disabled></h1>
+    </form>
+  </div>
     <ion-grid>
       <ion-row>
-        <ion-button onClick="calculator.display.value += '3.14'">phi</ion-button>
-        <ion-col size="2"><button onclick="calculator.display.value += '('">(</button></ion-col>
-        <ion-col size="2"><button onclick="calculator.display.value += ')'" >)</button></ion-col>
-        <ion-col size="2"><button onclick="calculator.display.value += '.'">.</button></ion-col>
-        <ion-col size="2"><button onclick="calculator.display.value = ''">clear</button></ion-col>
-        <ion-col size="2"><button onclick="calculator.display.value = calculator.display.value.substring(0, calculator.display.value.length - 1)">del</button></ion-col>
-        <ion-col size="2"><button onclick="calculator.display.value += '/'">/</button></ion-col>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += '3.14'" size="large" expand="block" shape="round">phi</ion-button></ion-col>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += '('" size="large" expand="block" shape="round">(</ion-button></ion-col>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += ')'" size="large" expand="block" shape="round">)</ion-button></ion-col>
+        <ion-col size="2"><ion-button onclick="calculator.display.value += '.'" size="large" expand="block" shape="round">.</ion-button></ion-col>
+        <ion-col size="2"><ion-button onclick="calculator.display.value = ''" size="large" expand="block" shape="round">clear</ion-button></ion-col>
+        <ion-col size="2"><ion-button onclick="calculator.display.value = calculator.display.value.substring(0, calculator.display.value.length - 1)" size="large" expand="block" shape="round">del</ion-button></ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="2"><ion-button onclick="calculator.display.value += '1'" size="large" expand="block" shape="round">1</ion-button></ion-col>
-        <ion-col size="2"><ion-button onclick="calculator.display.value += '2'" size="large" expand="block" shape="round">2</ion-button></ion-col>
-        <ion-col size="2"><ion-button onclick="calculator.display.value += '3'" size="large" expand="block" shape="round">3</ion-button></ion-col>
-        <ion-col size="2"><ion-button onclick="calculator.display.value += '+'" size="large" expand="block" shape="round">+</ion-button></ion-col>
-        <ion-col size="2"><ion-button onclick="calculator.display.value = Math.sin(calculator.display.value)" size="large" expand="block" shape="round">sin</ion-button></ion-col>
-        <ion-col size="2"><ion-button onclick="calculator.display.value = Math.sinh(calculator.display.value)" size="large" expand="block" shape="round">sinh</ion-button></ion-col>
+        <ion-col size="2"><ion-button onclick="calculator.display.value = Math.pow(calculator.display.value,2)" size="large" expand="block" shape="round">x<sup><small>2</small></sup></ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value = Math.pow(calculator.display.value,3)">x<sup><small>3</small></sup></ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value = Math.pow(calculator.display.value, 4)">x<sup><small>4</small></sup></ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '7'">7</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '8'">8</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '9'">9</ion-button></ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="2"><ion-button onclick="calculator.display.value += '3.14'" size="large" expand="block" shape="round">AC</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">/</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">×</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '*'">×</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value = Math.sqrt(calculator.display.value)" >&radic;</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value = Math.sinh(calculator.display.value)">sinh</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '4'">4</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '5'">5</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '6'">6</ion-button></ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="2"><ion-button onclick="calculator.display.value += '3.14'" size="large" expand="block" shape="round">AC</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">/</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">×</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '-'">-</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '%'">mod</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value = Math.cosh(calculator.display.value)">cosh</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '1'">1</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '2'">2</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '3'">3</ion-button></ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="2"><ion-button onclick="calculator.display.value += '3.14'" size="large" expand="block" shape="round">AC</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">/</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">×</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '+'">+</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value = Math.log(calculator.display.value)">log</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value = Math.cosh(calculator.display.value)">cosh</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calcuator.display.value=fact(calculator.display.value)">n!</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '0'">0</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round"  value="=" onclick="calculator.display.value = eval(calculator.display.value)">=</ion-button></ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="2"><ion-button onclick="calculator.display.value += '3.14'" size="large" expand="block" shape="round">AC</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">/</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">×</ion-button></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="2"><ion-button onclick="calculator.display.value += '3.14'" size="large" expand="block" shape="round">AC</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">&plusmn;</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">/</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">C</ion-button></ion-col>
-        <ion-col size="2"><ion-button size="large" expand="block" shape="round">×</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value += '/'">/</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value = Math.exp(calculator.display.value)">e<sup><small>x</small></sup></ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value = Math.tanh(calculator.display.value)">tanh</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value = Math.sin(calculator.display.value)">sin</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value = Math.cos(calculator.display.value)">cos</ion-button></ion-col>
+        <ion-col size="2"><ion-button size="large" expand="block" shape="round" onclick="calculator.display.value = Math.tan(calculator.display.value)">tan</ion-button></ion-col>
       </ion-row>
     </ion-grid>
 
